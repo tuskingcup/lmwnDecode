@@ -13,9 +13,10 @@ func reversebyte(input []byte) []byte {
 }
 
 func main() {
-
+	var whatIsIt string
 	secret := "aWFuZ25vVzpOQU06RU5JTDp0YTpzdTpuaW9K"
 	sd, _ := base64.StdEncoding.DecodeString(secret)
 
-	fmt.Printf("Decoded text: %s\n", reversebyte(sd))
+	whatIsIt = string(reversebyte(sd))
+	fmt.Println(whatIsIt)
 }
